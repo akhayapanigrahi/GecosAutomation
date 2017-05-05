@@ -1,0 +1,270 @@
+2017-05-04 15:15:43 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:15:43 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:15:43 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 15:16:06 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 15:16:06 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 15:16:06 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 15:16:06 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:16:06 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:16:47 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 15:16:48 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 15:16:48 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 15:16:48 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 15:16:49 CustomReport [INFO]  Sending mail ...
+2017-05-04 15:21:01 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:21:01 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:21:01 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 15:21:17 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 15:21:17 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 15:21:17 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 15:21:17 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:21:17 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:22:16 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 15:22:33 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 15:22:33 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 15:22:33 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 15:22:58 CustomReport [INFO]  Sending mail ...
+2017-05-04 15:33:32 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:33:32 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:33:32 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 15:34:05 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 15:34:05 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 15:34:05 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 15:34:05 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:34:05 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:34:45 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 15:34:45 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 15:34:45 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 15:34:45 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 15:34:47 CustomReport [INFO]  Sending mail ...
+2017-05-04 15:40:53 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:40:53 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 15:40:54 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 15:41:31 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 15:41:31 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 15:41:31 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 15:41:31 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:41:31 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 15:42:10 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 15:42:10 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 15:42:10 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 15:42:10 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 15:42:12 CustomReport [INFO]  Sending mail ...
+2017-05-04 16:00:21 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 16:00:21 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 16:00:22 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 16:00:37 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 16:00:37 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 16:00:37 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 16:00:37 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 16:00:37 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 16:01:32 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 16:01:40 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 16:01:40 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 16:01:40 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 16:03:13 CustomReport [INFO]  Sending mail ...
+2017-05-04 16:12:52 SendingEmail [INFO]  Sending mail ...
+2017-05-04 16:20:58 SendingEmail [INFO]  Sending mail ...
+2017-05-04 16:30:20 SendingEmail [INFO]  Sending mail ...
+2017-05-04 16:40:52 SendingEmail [INFO]  Sending mail ...
+2017-05-04 16:43:14 SendingEmail [INFO]  Sending mail ...
+2017-05-04 16:47:05 SendingEmail [INFO]  Sending mail ...
+2017-05-04 16:56:21 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 16:56:21 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 16:56:21 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 16:56:40 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 16:56:40 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 16:56:40 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 16:56:40 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 16:56:40 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 16:57:40 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 16:57:46 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 16:57:46 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 16:57:46 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 17:01:18 CustomReport [INFO]  Sending mail ...
+2017-05-04 17:19:20 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 17:19:20 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 17:19:20 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 17:19:33 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 17:19:33 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 17:19:33 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 17:19:33 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 17:19:33 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 17:20:17 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 17:20:17 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 17:20:17 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 17:20:17 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 17:20:19 CustomReport [INFO]  Sending mail ...
+2017-05-04 17:21:44 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 17:21:44 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyHomePageDisplay ****************** 
+
+2017-05-04 17:21:44 RemoveUserInCCNotification [INFO] Login Page is displayed
+2017-05-04 17:21:57 RemoveUserInCCNotification [INFO] This added user is validated and have access to App config page
+2017-05-04 17:21:57 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 1  FAIL: 0  SKIP: 0
+
+2017-05-04 17:21:57 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 2  FAIL: 0  SKIP: 0
+
+2017-05-04 17:21:57 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 17:21:57 ResultListener [INFO] 
+
+****************** START OF TEST CASE  verifyUserAddedasCC ****************** 
+
+2017-05-04 17:22:36 RemoveUserInCCNotification [INFO] User not found in the List
+2017-05-04 17:22:36 RemoveUserInCCNotification [INFO] Email entered before not found in the  list
+2017-05-04 17:22:36 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 3  FAIL: 0  SKIP: 0
+
+2017-05-04 17:22:36 ResultListener [INFO] 
+ CURRENT TEST EXECUTION STATUS -> PASS: 4  FAIL: 0  SKIP: 0
+
+2017-05-04 17:22:37 CustomReport [INFO]  Sending mail ...

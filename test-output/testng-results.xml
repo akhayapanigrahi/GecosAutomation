@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[-------------------------------------]]>
+    </line>
+    <line>
+      <![CDATA[-- Generating test HTML report...  --]]>
+    </line>
+    <line>
+      <![CDATA[-------------------------------------]]>
+    </line>
+    <line>
+      <![CDATA[Size of suites: 1]]>
+    </line>
+    <line>
+      <![CDATA[Size of suite: 1]]>
+    </line>
+    <line>
+      <![CDATA[Generating method detail for failed configurations...]]>
+    </line>
+    <line>
+      <![CDATA[Result map was empty.]]>
+    </line>
+    <line>
+      <![CDATA[Generating method detail for failed tests...]]>
+    </line>
+    <line>
+      <![CDATA[Result map was empty.]]>
+    </line>
+    <line>
+      <![CDATA[Generating method detail for skipped configurations...]]>
+    </line>
+    <line>
+      <![CDATA[Result map was empty.]]>
+    </line>
+    <line>
+      <![CDATA[Generating method detail for skipped tests...]]>
+    </line>
+    <line>
+      <![CDATA[Result map was empty.]]>
+    </line>
+    <line>
+      <![CDATA[Generating method detail for passed tests...]]>
+    </line>
+  </reporter-output>
+  <suite name="Gecos Test Suite" duration-ms="84229" started-at="2017-05-05T05:59:57Z" finished-at="2017-05-05T06:01:21Z">
+    <groups>
+      <group name="BasicTests">
+        <method signature="RemoveUserInCCNotificationTest.verifyHomePageDisplay()[pri:0, instance:com.itc.test.RemoveUserInCCNotificationTest@1f28c152]" name="verifyHomePageDisplay" class="com.itc.test.RemoveUserInCCNotificationTest"/>
+        <method signature="RemoveUserInCCNotificationTest.verifyUserAddedasCC()[pri:0, instance:com.itc.test.RemoveUserInCCNotificationTest@1f28c152]" name="verifyUserAddedasCC" class="com.itc.test.RemoveUserInCCNotificationTest"/>
+      </group> <!-- BasicTests -->
+    </groups>
+    <test name="Gecos Test" duration-ms="84229" started-at="2017-05-05T05:59:57Z" finished-at="2017-05-05T06:01:21Z">
+      <class name="com.itc.test.RemoveUserInCCNotificationTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.itc.test.RemoveUserInCCNotificationTest@1f28c152]" name="setup" is-config="true" duration-ms="34239" started-at="2017-05-05T11:29:57Z" finished-at="2017-05-05T11:30:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyHomePageDisplay()[pri:0, instance:com.itc.test.RemoveUserInCCNotificationTest@1f28c152]" name="verifyHomePageDisplay" duration-ms="10482" started-at="2017-05-05T11:30:31Z" finished-at="2017-05-05T11:30:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageDisplay -->
+        <test-method status="PASS" signature="verifyUserAddedasCC()[pri:0, instance:com.itc.test.RemoveUserInCCNotificationTest@1f28c152]" name="verifyUserAddedasCC" duration-ms="38430" started-at="2017-05-05T11:30:42Z" finished-at="2017-05-05T11:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserAddedasCC -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.itc.test.RemoveUserInCCNotificationTest@1f28c152]" name="closeBrowser" is-config="true" duration-ms="1076" started-at="2017-05-05T11:31:20Z" finished-at="2017-05-05T11:31:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.itc.test.RemoveUserInCCNotificationTest@1f28c152]" name="tearDown" is-config="true" duration-ms="109" started-at="2017-05-05T11:31:21Z" finished-at="2017-05-05T11:31:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.itc.test.RemoveUserInCCNotificationTest -->
+    </test> <!-- Gecos Test -->
+  </suite> <!-- Gecos Test Suite -->
+</testng-results>

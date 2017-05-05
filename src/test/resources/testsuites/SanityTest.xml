@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity Test Suite">
+	<parameter name="browserType" value="GC" />
+	<listeners>
+		<listener class-name="com.itc.util.ExtentReporterNG" />
+		<listener class-name="com.itc.util.CustomReport" />
+	</listeners>
+
+	<test name="Sanity Tests" preserve-order="true">
+		<groups>
+			<run>
+				<include name="SanityTest" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.itc.test.NewCustomerPageTest" />
+			<class name="com.itc.test.NewInvoicePageTest" />
+			 <class name="com.itc.test.NewExpensePageTest" />
+			<class name="com.itc.test.EditExpensePageTest" />
+			<class name="com.itc.test.ReciptPageTest" /> 
+
+		</classes>
+	</test>
+</suite>

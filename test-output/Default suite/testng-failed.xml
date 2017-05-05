@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.itc.test.AddUserInCCNotificationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyGecosSuperAdminPage"/>
+          <include name="verifyUserAddedasCC"/>
+          <include name="verifyHomePageDisplay"/>
+          <include name="closeBrowser"/>
+          <include name="verifyGecosAdminPage"/>
+          <include name="verifyLoginPage"/>
+        </methods>
+      </class> <!-- com.itc.test.AddUserInCCNotificationTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

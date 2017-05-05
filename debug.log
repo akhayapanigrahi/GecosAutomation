@@ -1,0 +1,4 @@
+[0412/191107.630:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0412/191107.635:ERROR:process_reader_win.cc(114)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0412/191107.652:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0412/191107.652:ERROR:process_reader_win.cc(114)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
