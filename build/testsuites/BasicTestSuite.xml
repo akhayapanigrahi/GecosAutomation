@@ -3,8 +3,8 @@
 	
 	<parameter name="browserType" value="GC" />
 	<listeners>
-		<!-- <listener class-name="com.itc.util.CustomReport" />  -->
-		  <listener class-name="com.itc.util.ExtentReporterNG" />
+		<!-- <listener class-name="com.itc.util.CustomReport" />
+		  <listener class-name="com.itc.util.ExtentReporterNG" />  -->
 	</listeners>
 	<test name="Gecos Test"  parallel="false">
 	<groups>

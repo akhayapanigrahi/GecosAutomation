@@ -35,9 +35,7 @@ import org.monte.media.math.Rational;
 import org.monte.screenrecorder.ScreenRecorder;
  
 public class VideoRecord {
-    private ScreenRecorder screenRecorder;
-  
-    
+    public ScreenRecorder screenRecorder;
  
        public void startRecording() throws Exception
        {    
