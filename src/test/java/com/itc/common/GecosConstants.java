@@ -39,9 +39,6 @@ public class GecosConstants {
 		Cell cel = row.createCell(colNum);
 		cel.setCellType(cel.CELL_TYPE_STRING);
 		
-		/*FileOutputStream fos = new FileOutputStream(excelPath);
-		cel.setCellValue(data);
-		wb.write(fos);*/
 	
 	}
 	

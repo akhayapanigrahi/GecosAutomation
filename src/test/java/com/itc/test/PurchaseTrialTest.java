@@ -39,13 +39,13 @@ public class PurchaseTrialTest extends BaseTestObject {
 		}
 	}
 	@Test(priority = 1, enabled = true,groups="BasicTests")
-	public void verifyStopTrial() throws Exception {
+	public void verifyPurchaseTrial() throws Exception {
 		try {
 
 			trial = new PurchaseTrial(driver);
 			GecosUtil.explicitWait(3000);
-			String appName =getValFromExcel(1,2);
-			String email =getValFromExcel(1,3);
+			String appName =getValFromExcel(11,2);
+			String email =getValFromExcel(11,3);
 			trial.startBESTrial(appName,email);
 			flag = trial.isTrialConvetedToPurchase();
 			Assert.assertTrue(flag);

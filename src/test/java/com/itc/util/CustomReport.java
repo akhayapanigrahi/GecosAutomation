@@ -24,7 +24,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -126,9 +125,9 @@ public class CustomReport extends ResultListener implements IReporter{
 			for (ISuite suite : suites) {
 				String suiteName = suite.getName();
 			List<String> lst = new ArrayList<String>();
-			lst.add("apanigrahi@blackberry.com");
+			lst.add("apanigrahi@itcinfotech.com");
 			System.out.println(lst);
-			sendMailViaExchangeService("apanigrahi", "Login@29", suiteName + " Report",sb.toString(), lst);
+			sendMailViaExchangeService("apanigrahi@itcinfotech.com", "login@124", suiteName + " Report",sb.toString(), lst);
 		}
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -839,21 +838,34 @@ public class CustomReport extends ResultListener implements IReporter{
 		ExchangeService service;
 
 		service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
+		System.out.println("username: " + username + " Password: " + password);
 		ExchangeCredentials credentials = new WebCredentials(username, password);
 		service.setCredentials(credentials);
 		try {
-			//service.setUrl(new URI("https://outlook.office365.com/EWS/Exchange.asmx"));
+//			service.setUrl(new URI("https://outlook.office365.com/EWS/Exchange.asmx"));
 			service.setUrl(new URI("https://cas-hq.rim.net/owa/"));
-		} catch (URISyntaxException e) {
+			
+		} 
+		catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
+		EmailMessage msg;
 		try {
-			EmailMessage msg;
-			msg = new EmailMessage(service);
-			msg.setSubject(subject);
-			msg.setBody(MessageBody.getMessageBodyFromText(body));
-			Iterator<String> mailList = toAddressList.iterator();
-			msg.getToRecipients().addSmtpAddressRange(mailList);
+			
+//			msg = new EmailMessage(service);
+//			msg.setSubject(subject);
+//			msg.setBody(MessageBody.getMessageBodyFromText(body));
+//			Iterator<String> mailList = toAddressList.iterator();
+//			msg.getToRecipients().addSmtpAddressRange(mailList);
+//			msg.send();
+			
+			msg= new EmailMessage(service);
+			msg.setSubject("Hello world!");
+			msg.setBody(MessageBody.getMessageBodyFromText("Sent using the EWS Java API."));
+			msg.getToRecipients().add("prashant.shahapur@itcinfotech.com");
+			
+//			System.out.println(msg);
+			System.out.println(msg.getBody());
 			msg.send();
 			logger.info("Mail sending Success...Please check your inbox");
 		} catch (Exception e) {

@@ -212,7 +212,9 @@ public void matchEmailWithOrgID() throws Exception{
 				By license_quantity_amount=By.xpath("//a[contains(@onclick,\"updateLicenseQuantity('"+Actual_org_text+"','"+appName+"')\")]");
 				String liense_quanity_text=setElement(license_quantity_amount).getText();
 				logger.info("License quanity is for the Trial "+app_ID+" is "+liense_quanity_text);
-				if(orgToSerach.getText().contains(Actual_org_text)&&app_ID.equals(appName)&&liense_quanity_text!=null){ 
+				By TrialStatus=By.xpath("//td[@id='status"+Actual_org_text+appName+"']");
+				String Trial_Status_text = setElement(TrialStatus).getText();
+				if((orgToSerach.getText().contains(Actual_org_text))&&(app_ID.equals(appName))&&(liense_quanity_text!=null)&&(Trial_Status_text.equals("TRIAL STARTED"))){ 
 		        	
 		        	logger.info("Found the expected Org ID: "+orgToSerach.getText()+" and App ID: "+app_ID+" and License Quantity: "+liense_quanity_text);
 

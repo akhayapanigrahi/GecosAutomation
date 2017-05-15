@@ -18,26 +18,26 @@ public class StartISVTrialFromPCE extends BasePageObject {
 	}
 
 	boolean flag = false;
-	boolean flag1 = false;
-	boolean manageFlag=false;
+	boolean flag1 = true;
+	boolean manageFlag = false;
 	public static Logger logger = Logger.getLogger(StartISVTrialFromPCE.class);
-	String PCEUrl="https://ssapps-stg15.good.com/#/apps";
+	String PCEUrl = "https://ssapps-stg15.good.com/#/apps";
 
 	/* Web elements */
 
 	By userEmailAddr = By.xpath("//input[@id='IDToken1'][@placeholder='Email or Username']");
 	By userPwd = By.xpath("//input[@id='IDToken2'][@placeholder='Password']");
 	By login = By.xpath("//input[@value='Log In'][@name='Login.Submit']");
-	By startTrialLink=By.xpath("//a[contains(text(),'Start trial')]");
-	By searchApp=By.xpath("//input[@placeholder='Search']");
-	By email_text_input=By.id("email");
-    By OrgIdLink=By.xpath("//a[contains(@href,'https://sspsp-stg15.good.com/#/a/organization')]");
-	By pceLogin=By.xpath("//a[contains(text(),'Log in')]");
-    By texts_click=By.xpath("//ti-autocomplete-match//a[@class='ng-binding']");
-    By ConfirmBtn=By.xpath("//button[contains(text(),'Confirm')]");
-    By text=By.xpath("//h1[contains(text(),'Cloud SaaS Terms of Service')]");
-    By text1=By.xpath("//h2[contains(text(),'Trial Request Acknowledged')]");
-    By text2=By.xpath("//h2[contains(text(),'Trial Started')]");
+	By startTrialLink = By.xpath("//a[contains(text(),'Start trial')]");
+	By searchApp = By.xpath("//input[@placeholder='Search']");
+	By email_text_input = By.id("email");
+	By OrgIdLink = By.xpath("//a[contains(@href,'https://sspsp-stg15.good.com/#/a/organization')]");
+	By pceLogin = By.xpath("//a[contains(text(),'Log in')]");
+	By texts_click = By.xpath("//ti-autocomplete-match//a[@class='ng-binding']");
+	By confirmBtn = By.xpath("//button[contains(.,'Confirm')]");
+	By text = By.xpath("//h1[contains(text(),'Cloud SaaS Terms of Service')]");
+	By text1 = By.xpath("//h2[contains(text(),'Trial Request Acknowledged')]");
+	By text2 = By.xpath("//h2[contains(text(),'Trial Started')]");
 
 	public boolean isLoginPageDisplayed() throws Exception {
 		try {
@@ -77,120 +77,125 @@ public class StartISVTrialFromPCE extends BasePageObject {
 		}
 	}
 
-	
-	public void loginAsUserInPCE(String User, String Password,String pceUrl) throws Exception {
+	public void loginAsUserInPCE(String User, String Password, String pceUrl) throws Exception {
 		try {
 			driver.get(pceUrl);
 			waitExplicit(pceLogin, 60);
 			if (isElementPresent(pceLogin)) {
 				setElement(pceLogin).click();
 			}
-			
+
 			enterEmailAddr(User);
 			enterPassword(Password);
 			clickLogin();
 			waitExplicit(searchApp, 120);
 
-		} 
-		catch (Exception e) {
+		} catch (Exception e) {
 			throw new Exception("Login is not Successfull with the set of Data provided");
 		}
 	}
 
-public void startIVSTrial(String appName, String email,String textToSelect) throws Exception{
-	
-	clickSearch();
-	enterAppName(appName);
-	waitExplicit(texts_click, 120);
-	selectOptionWithText(textToSelect);
-	clickStartTrial();
-	waitExplicit(ConfirmBtn, 120);
-	clickConfirmBtn();
-	//waitImplicit();
-	
-	}
-public void clickSearch() throws Exception {
-	if (isElementPresent(searchApp)) {
-		setElement(searchApp).click();
-		waitImplicit();
-		
-	}
-}
-public void enterAppName(String appName) throws Exception {
-	if (isElementPresent(searchApp)) {
-		setElement(searchApp).sendKeys(appName);
-		waitExplicit(searchApp, 30);
-	}
-}
-public void selectOptionWithText(String textToSelect) throws Exception{
+	public void startIVSTrial(String appName, String email, String textToSelect) throws Exception {
 
-	List<WebElement> ele_texts = driver.findElements(texts_click);
-	
-	for(WebElement textToClick : ele_texts){
-		logger.info("The Text to be clickable is "+ textToClick.getText());
-      if(textToClick.getText().contains(textToSelect)) {
-      	logger.info("Found the expected text "+textToSelect);
-      	textToClick.click();
-          break;
-      }
-      else{
-      	System.out.println("Not finding element to click");
-      }
-	
-  }
-	
-}
+		clickSearch();
+		enterAppName(appName);
+		waitExplicit(texts_click, 120);
+		selectOptionWithText(textToSelect);
+		waitExplicit(startTrialLink, 120);
+		clickStartTrial();
+		// waitExplicit(confirmBtn, 20);
+		clickConfirmBtn();
+		// waitImplicit();
 
-
-public void clickStartTrial() throws Exception {
-	if (isElementPresent(startTrialLink)) {
-		setElement(startTrialLink).click();
-		waitExplicit(ConfirmBtn, 120);
 	}
-}
-public void clickConfirmBtn() throws Exception {
-	if (isElementPresent(ConfirmBtn)) {
-		setElement(ConfirmBtn).click();
-		waitExplicit(text, 150);
-	}
-}
 
+	public void clickSearch() throws Exception {
+		if (isElementPresent(searchApp)) {
+			setElement(searchApp).click();
+			waitImplicit();
+
+		}
+	}
+
+	public void enterAppName(String appName) throws Exception {
+		if (isElementPresent(searchApp)) {
+			setElement(searchApp).sendKeys(appName);
+			waitExplicit(searchApp, 30);
+		}
+	}
+
+	public void selectOptionWithText(String textToSelect) throws Exception {
+
+		List<WebElement> ele_texts = driver.findElements(texts_click);
+
+		for (WebElement textToClick : ele_texts) {
+			logger.info("The Text to be clickable is " + textToClick.getText());
+			if (textToClick.getText().contains(textToSelect)) {
+				logger.info("Found the expected text " + textToSelect);
+				textToClick.click();
+				break;
+			} else {
+				System.out.println("Not finding element to click");
+			}
+
+		}
+
+	}
+
+	public void clickStartTrial() throws Exception {
+		if (isElementPresent(startTrialLink)) {
+			setElement(startTrialLink).click();
+			waitExplicit(confirmBtn, 120);
+		}
+	}
+
+	public void clickConfirmBtn() throws Exception {
+		scrollTillElementFound(confirmBtn);
+		setElement(confirmBtn).click();
+		waitExplicit(text, 300);
+
+	}
 
 public boolean verifyTrialStarted() throws Exception {
-	try {
-		waitExplicit(text, 180);
-		flag1 = isElementPresent(text);
-		if (flag1) {
-		String actualText1=setElement(text).getText();
-		String expectedText1="Cloud SaaS Terms of Service";
-		String actualText2=setElement(text1).getText();
-		String expectedText2="Trial Request Acknowledged";
-		String actualText3=setElement(text2).getText();
-		String expectedText3="Trial Started";
-
-		if (actualText1.equals(expectedText1)) {
-			
-			logger.info("The ISV trial is started successfully");
-		} 
-		else if (actualText2.equals(expectedText2)) {
-			
-			logger.info("The ISV trial is started successfully");
-		} 
-		else  if (actualText3.equals(expectedText3)) {
 	
-	             logger.info("The ISV trial is started successfully");
-          } 
-        else {
-			logger.info("The ISV trial not is started successfully");
+		try {
+			
+			if (isElementPresent(text)) {
+			String actualText1=setElement(text).getText();
+			String expectedText1="Cloud SaaS Terms of Service";
+						
+			if (actualText1.equals(expectedText1)) {
+				
+				logger.info("The ISV trial is started successfully");
+			} 
+			
+			}
+			
+			else if(isElementPresent(text1)) { 
+				
+				String actualText2=setElement(text1).getText();
+				String expectedText2="Trial Request Acknowledged";
+				if (actualText2.equals(expectedText2)) {
+						
+						logger.info("The ISV trial is started successfully");
+					} 
+			}
+			else if (isElementPresent(text2)) { 
+				
+				String actualText3=setElement(text2).getText();
+				String expectedText3="Trial Started";
+				
+				if (actualText3.equals(expectedText3)) {
+						
+						logger.info("The ISV trial is started successfully");
+					} 
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		}
-	} catch (Exception e) {
-		throw new Exception("Home Link displayed" + isLoginPageDisplayed() + e.getLocalizedMessage());
-	}
-	return flag1;
+
+return flag1;
 }
 
-	
-	
-	
 }

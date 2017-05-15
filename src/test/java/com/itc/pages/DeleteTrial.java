@@ -276,7 +276,6 @@ public boolean isTrialDisplayedInDeleteTrials() throws Exception {
 		if (manageFlag) {
 			setElement(manageTrialLink).click();
 			rejectTrial();
-			logger.info("The Deleted trial is displayed in Delete trials page for the user");
 		} else {
 			logger.info("The trial is not deleted for the user");
 		}

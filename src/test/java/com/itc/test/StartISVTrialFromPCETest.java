@@ -55,7 +55,7 @@ public class StartISVTrialFromPCETest extends BaseTestObject {
 		}
 
 		catch (Exception e) {
-			throw new Exception("Failed to Login to Gecos Admin console"
+			throw new Exception("Failed to Start Trial from PCE"
 					+ "\n clickOnSiteLogoAndCheckThePageTitle" + e.getLocalizedMessage());
 		}
 	}
@@ -72,7 +72,7 @@ public class StartISVTrialFromPCETest extends BaseTestObject {
 		}
 
 		catch (Exception e) {
-			throw new Exception("Failed to Start ISV trial for user from PCE"
+			throw new Exception("Failed to  ISV trial for user from PCE"
 					+ "\n clickOnSiteLogoAndCheckThePageTitle" + e.getLocalizedMessage());
 		}
 	}

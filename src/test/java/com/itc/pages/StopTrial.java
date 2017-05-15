@@ -220,7 +220,7 @@ public void stopTrial() throws Exception{
 			        	String Trial_Status_ext = setElement(TrialStatus).getText();
 			        	
 
-						if(Trial_Status_ext.equals("TRIAL EXTENDED")){
+						if(Trial_Status_ext.equals("TRIAL STOPPED")){
 							logger.info("Trial is Stopped and is displayed in the Console....");
 							
 						}

@@ -2,5 +2,8 @@
 	<head>
 		<title>Gecos Execution</title>
 	</head>
-	<body>Hi Everybody,</body>
+	<body>
+		Hi Everybody,
+		<p> Please find the Gecos Test Suite Report </p>
+	</body>
 </html>

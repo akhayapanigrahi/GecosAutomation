@@ -189,11 +189,7 @@ public void matchEmailWithOrgID() throws Exception{
 		setElement(expandIcon).click();
 		waitImplicit(3000);
 		String emailId = setElement(emailText).getText();
-		
 		String email =getValFromExcel(1,3);
-		
-
-
 		if(emailId.equals(email)){
 			
 			String orgText = setElement(orgIdText).getText();
@@ -209,8 +205,10 @@ public void matchEmailWithOrgID() throws Exception{
 				String appName =getValFromExcel(3,4);
 				By app_id_text=By.xpath("//td[contains(text(),'"+appName+"')]");
 				String app_ID=setElement(app_id_text).getText();
-		        if(orgToSerach.getText().contains(Actual_org_text)&&app_ID.equals(appName)){ 
-		        	logger.info("Found the expected Org ID "+orgToSerach.getText()+" and App ID "+app_ID);
+				By TrialStatus=By.xpath("//td[@id='status"+Actual_org_text+appName+"']");
+				String Trial_Status_text = setElement(TrialStatus).getText();
+		        if(orgToSerach.getText().contains(Actual_org_text)&&(app_ID.equals(appName))&&(Trial_Status_text.equals("TRIAL STARTED"))){ 
+		        	logger.info("Found the expected Org ID "+orgToSerach.getText()+" and App ID "+app_ID +" and Trial is started");
 
 		        break;
 		        }

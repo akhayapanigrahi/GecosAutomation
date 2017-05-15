@@ -40,7 +40,6 @@ public class StartTrialForNormalBundleTest extends BaseTestObject {
 	@Test(priority = 1, enabled = true,groups="BasicTests")
 	public void verifyStartTrialForBESBundle() throws Exception {
 		try {
-
 			trial = new StartTrialForNormalBundle(driver);
 			GecosUtil.explicitWait(3000);
 			String appName =getValFromExcel(2,2);
@@ -48,7 +47,6 @@ public class StartTrialForNormalBundleTest extends BaseTestObject {
 			trial.startBESTrial(appName,email);
 			flag = trial.isTrialDisplayedInManageTrials();
 			Assert.assertTrue(flag);
-			
 		}
 
 		catch (Exception e) {

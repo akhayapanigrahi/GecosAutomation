@@ -224,12 +224,12 @@ public void extendTrial() throws Exception{
 						alert.accept();
 						By TrialStatusNext=By.xpath("//td[@id='status"+Actual_org_text+appName+"']");
 						waitExplicit(TrialStatusNext, 60);
-			        	String Trial_Status_ext = setElement(TrialStatus).getText();
+			        	String Trial_Status_text = setElement(TrialStatus).getText();
 			        	
 						String endDate_text_after = setElement(endDate).getText();
 						logger.info("The End date after Extended  is "+endDate_text_after);
 
-						if(Trial_Status_ext.equals("TRIAL EXTENDED")&&(endDate_text_before!=endDate_text_after)){
+						if(Trial_Status_text.equals("TRIAL EXTENDED")&&(endDate_text_before!=endDate_text_after)){
 							logger.info("Trial is Extended and is displayed in the Console....");
 							
 						}

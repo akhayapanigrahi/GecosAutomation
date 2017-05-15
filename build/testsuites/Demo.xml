@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Gecos Test Suite">
+
+	<parameter name="browserType" value="GC" />
+	<listeners>
+		<!-- <listener class-name="com.itc.util.CustomReport" /> -->
+		<listener class-name="com.itc.util.ExtentReporterNG" />
+	</listeners>
+	<test name="Gecos Test" parallel="false">
+		<groups>
+			<run>
+				<include name="BasicTests" />
+			</run>
+		</groups>
+		<classes>
+			<!-- <class name="com.itc.test.StartBESTrialTest" />
+			<class name="com.itc.test.StartTrialForNormalBundleTest" />
+			<class name="com.itc.test.StartISVTrialInGecosTest" />
+			<class name="com.itc.test.StartISVTrialFromPCETest" />
+			<class name="com.itc.test.ExtendTrialTest" />
+			<class name="com.itc.test.StopTrialTest" />
+			<class name="com.itc.test.PurchaseTrialTest" />
+			<class name="com.itc.test.DeleteTrialTest" />
+			<class name="com.itc.test.AddUserInCCNotificationTest" />
+			<class name="com.itc.test.RemoveUserInCCNotificationTest" /> -->
+			
+			
+			<class name="com.itc.test.StartISVTrialFromPCETest" />
+
+		</classes>
+	</test>
+</suite>

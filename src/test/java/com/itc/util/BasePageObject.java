@@ -16,6 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -299,6 +300,13 @@ public class BasePageObject {
 		textBox.sendKeys(value);
 		
 
+	}
+	
+	public void scrollTillElementFound(By element){
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(element));	
+		
 	}
 	
 	public void handleAlert() {

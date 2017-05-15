@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" >
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.itc.test</groupId>
 	<artifactId>SeleniumAutomationTest</artifactId>
@@ -17,8 +17,10 @@
 				<configuration>
 					<skipTests>${skip.tests}</skipTests>
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>SanityTest.xml</suiteXmlFile> -->
-						<SuiteXmlFile>${basedir}\src\test\resources\testsuites\${SuiteFile}</SuiteXmlFile>
+						<!-- Below is required for Jenkins Execution -->
+						<!-- <SuiteXmlFile>src\test\resources\testsuites\${SuiteXml}</SuiteXmlFile> -->
+						<!-- Below is required for Eclipse Execution -->
+						<SuiteXmlFile>src\test\resources\testsuites\BasicTestSuite.xml</SuiteXmlFile>
 					</suiteXmlFiles>
 
 				</configuration>
@@ -65,7 +67,6 @@
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
-			<!-- <version>1.4</version> -->
 			<version>1.4</version>
 		</dependency>
 		<dependency>
@@ -89,8 +90,11 @@
 			<artifactId>extentreports</artifactId>
 			<version>2.41.0</version>
 		</dependency>
-		<!-- <dependency> <groupId>jfree</groupId> <artifactId>jfreechart</artifactId> 
-			<version>1.0.9</version> </dependency> -->
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+			<version>1.0.9</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.pojosontheweb/monte-repack -->
 		<dependency>
 			<groupId>com.pojosontheweb</groupId>
@@ -98,9 +102,24 @@
 			<version>1.0.1</version>
 		</dependency>
 
+		<!-- <dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.0</version>
+		</dependency>
 
+<dependency>
+    <groupId>net.java.dev.jna</groupId>
+    <artifactId>platform</artifactId>
+    <version>3.4.0</version>
+</dependency>
+<dependency>
+    <groupId>com.sun.jna</groupId>
+    <artifactId>jna</artifactId>
+    <version>3.0.9</version>
+</dependency>
 
-
+ -->
 	</dependencies>
 
 

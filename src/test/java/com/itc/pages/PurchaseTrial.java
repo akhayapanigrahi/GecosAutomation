@@ -3,6 +3,7 @@ package com.itc.pages;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -132,7 +133,7 @@ public void clickSearch() throws Exception {
 	}
 }
 public void clickCheckBox() throws Exception {
-	String appName =getValFromExcel(1,4);
+	String appName =getValFromExcel(11,4);
 	By AppName_checkBox=By.xpath("//input[@class='buddleAndApp_checkbox'][@value='" +appName+ "']");
 	if (isElementPresent(AppName_checkBox)) {
 		setElement(AppName_checkBox).click();
@@ -192,7 +193,7 @@ public void purchaseTrial() throws Exception{
 		waitImplicit(3000);
 		String emailId = setElement(emailText).getText();
 		
-		String email =getValFromExcel(1,3);
+		String email =getValFromExcel(11,3);
 
 		if(emailId.equals(email)){
 			
@@ -206,26 +207,33 @@ public void purchaseTrial() throws Exception{
 		    driver.switchTo().window(parent_Window); 
 				}
 			for(WebElement orgToSerach : OrgId_Links){
-				String appName =getValFromExcel(1,4);
+				String appName =getValFromExcel(11,4);
 				By app_id_text=By.xpath("//td[contains(text(),'"+appName+"')]");
 				String app_ID=setElement(app_id_text).getText();
 		        if(orgToSerach.getText().contains(Actual_org_text)&&app_ID.equals(appName)){ 
 		        	By TrialStatus=By.xpath("//td[@id='status"+Actual_org_text+appName+"']");
 		        	String Trial_Status = setElement(TrialStatus).getText();
-		        	
 		        	if(Trial_Status.equals("TRIAL STARTED")){
-						By PurchaseTrialLink=By.xpath("//a[contains(@onclick,\"purchase('"+Actual_org_text+"','"+appName+"',0)\")]");
+						By PurchaseTrialLink=By.xpath("//a[contains(@onclick,\"purchase('"+Actual_org_text+"','"+appName+"')\")]");
 						setElement(PurchaseTrialLink).click();
 						waitImplicit(3000);
-						setElement(purchaseMnmtLink).click();
+						Alert alert=driver.switchTo().alert();
+						alert.accept();
+						waitImplicit(3000);
+						logger.info("Trial is converted to Purchase successfully");
+						
+						//logger.info("The trial is Purchased for Org ID "+orgToSerach.getText()+" and App ID "+app_ID);
 						//Write code for verifying the trial is displayed in the Purchase management screen
 						}
-		        	logger.info("The trial is extended for Org ID "+orgToSerach.getText()+" and App ID "+app_ID);
 		        	
+		       }
+		       /* setElement(purchaseMnmtLink).click();
+	        	if(orgToSerach.getText().contains(Actual_org_text)&&(app_ID.equals(appName))){ 
+		        	logger.info("Found the expected Org ID "+orgToSerach.getText()+" and App ID "+app_ID +" and Trial is Purchased");
+
 		        break;
 		        }
-		        			        
-		
+*/		        
 		}
 			break;
 			}
@@ -243,6 +251,7 @@ public void purchaseTrial() throws Exception{
 	}
 }
 		
+
 public boolean isStartTrialPageDisplayed() throws Exception {
 	try {
 

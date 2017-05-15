@@ -34,20 +34,20 @@ public class BaseTestObject {
 	protected static WebDriver driver;
 	public static String propertyFilePath = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\testData.properties";
 	public static String chromeDriverPath = System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\chromedriver.exe";
-	//public static String firefoxDriverPath = System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\geckodriver.exe";
+	public static String firefoxDriverPath = System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\geckodriver.exe";
+	public static String ieDriverPath = System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\IEdriver.exe";
 
 	FileInputStream fileInput =null;
-	//Properties ObjProperty = getPropertyContents();
 	public Properties ObjProperty=getPropertyContents();
 	
 	public String browser = ObjProperty.getProperty("browser");
 	public String url = ObjProperty.getProperty("url");
 
-	 VideoRecord test=new VideoRecord();
+	 VideoRecord record=new VideoRecord();
 	
 	/**
 	 
-     * This function will execute before each Test tag in testng.xml
+     * This function will execute before each Test tag in xml file 
  
      * @param browser
  
@@ -99,7 +99,7 @@ public class BaseTestObject {
 	{
         if(browser.equalsIgnoreCase("FF"))
         {
-            System.setProperty("webdriver.gecko.driver","D:\\MyWorkspace\\GecosAutomation\\src\\test\\resources\\drivers\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver",firefoxDriverPath);
 
             driver = new FirefoxDriver();
         }
@@ -109,7 +109,7 @@ public class BaseTestObject {
             driver = new ChromeDriver();
         }
         else if(browser.equalsIgnoreCase("IE")){
-            System.setProperty("webdriver.ie.driver","C:\\IEdriver.exe");
+            System.setProperty("webdriver.ie.driver",ieDriverPath);
             driver = new InternetExplorerDriver();
         }
         else
@@ -117,7 +117,8 @@ public class BaseTestObject {
         	throw new Exception("Browser is not correct");
         }
        
-       test.startRecording();
+		 record.startRecording();
+
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
         driver.manage().window().maximize();
@@ -126,13 +127,14 @@ public class BaseTestObject {
 	@AfterClass(alwaysRun = true)
 	public void closeBrowser() throws Exception{
 		driver.quit();
+		record.stopRecording();
 	}
 
 	@AfterSuite(alwaysRun = true)
 	public void tearDown() throws Exception{
-		//ReportSending.execute("testaynaxdemo@gmail.com","testaynaxdemo@gmail.com");
+		//ReportSending.execute("akshaya.panigrahi@itcinfotech.com","akshaya.panigrahi@itcinfotech.com");
 		//driver.quit();
-       test.stopRecording();
+		//record.stopRecording();
 	}
 	
 	public void closePopUp() throws InterruptedException{

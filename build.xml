@@ -8,7 +8,7 @@
 	<property name="build" location="${basedir}/build" />
 
 	<!-- Variables used for TestNG report directory -->
-	<property name="test.report.dir" location="testreport" />
+	<property name="test.report.dir" location="test-output" />
 
 	<!-- Deletes the existing build, docs and dist directory -->
 	<target name="clean">
