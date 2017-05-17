@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import com.itc.util.BasePageObject;
+import com.itc.util.ExcelutilObject;
 
 public class AdminRoles extends BasePageObject {
 	AdminRoles objLoginPage = null;
@@ -23,6 +24,7 @@ public class AdminRoles extends BasePageObject {
 	boolean manageFlag=false;
     boolean deleteFlag=false;
 	public static Logger logger = Logger.getLogger(AdminRoles.class);
+	public static String excelPath = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\testDataSheet.xlsx";
 
 
 	/* Web elements */
@@ -34,6 +36,13 @@ public class AdminRoles extends BasePageObject {
 	By HomePageLink=By.linkText("Home");
 	By DeleteTrialsLink=By.linkText("Delete Trials");
 	By deleteLink=By.id("DeleteTrial");
+	By AppConfiLink=By.linkText("App Config");
+	By SearchTextBox=By.xpath(".//*[@id='appName']");
+	By searchBtn=By.id("searchButton");
+	By CCNotif_link=By.xpath("//a[contains(text(),'Cc Notifications')]");
+	By CCTextBox=By.id("cctype");
+	By addBtn=By.id("ccTypeButton");
+	By removeBtn=By.id("ccTypeButton");
 
 	public boolean isLoginPageDisplayed() throws Exception {
 		try {
@@ -120,6 +129,8 @@ public class AdminRoles extends BasePageObject {
 		}
 		return loginFlag;
 	}
+	
+	
 	public boolean isManageTrialPageDisplayed() throws Exception {
 	try {
     	manageFlag = isElementPresent(ManageTrialsLink);
@@ -141,8 +152,8 @@ public class AdminRoles extends BasePageObject {
 				setElement(DeleteTrialsLink).click();
 				logger.info("Delete trials Page is accessible and displayed for the Admin user");
 				List<WebElement> delete_Links =driver.findElements(deleteLink);
-				if(delete_Links.size()==0){
-					logger.info("Delete Link is not displayed as User is having only Admin access");
+				if(delete_Links.size()!=0){
+					logger.info("Delete Link is displayed as User is having only Admin access");
 				}
 				else{
 					logger.info("This user is not having Admin access and Delete trials access is available");
@@ -154,4 +165,63 @@ public class AdminRoles extends BasePageObject {
 		}
 		return deleteFlag;
 	}
+
+
+public void selectApp(String Appname,String AppID) throws Exception{
+	
+	waitExplicit(SearchTextBox, 120);
+	setElement(SearchTextBox).sendKeys(Appname);
+	waitExplicit(searchBtn, 60);
+	setElement(searchBtn).click();
+	By EditApp_link=By.xpath("//a[contains(@onclick,\"submitlink('','"+AppID+"','0'\")]");
+	waitExplicit(EditApp_link, 60);
+	setElement(EditApp_link).click();
+	
+	
+}	
+
+public void isAddButtonEnabled(String Appname,String AppID) throws Exception{
+	
+	waitExplicit(AppConfiLink, 120);
+	setElement(AppConfiLink).click();
+	selectApp(Appname, AppID);
+	waitExplicit(CCNotif_link, 120);
+	setElement(CCNotif_link).click();
+	waitExplicit(CCTextBox, 100);
+	
+	if(setElement(addBtn).isEnabled()){
+		
+		logger.info("Add button is enabled for user having Admin access");
+	}
+	else{
+		logger.info("Add button is not enabled for user having Admin access");
+	}
+	
+	}
+public void isRemoveButtonEnabled(String remove_ID, String Appname,String AppID) throws Exception{
+	
+	waitExplicit(AppConfiLink, 120);
+	setElement(AppConfiLink).click();
+	selectApp(Appname, AppID);
+	waitExplicit(CCNotif_link, 120);
+	setElement(CCNotif_link).click();
+	try {
+		if(setElement(removeBtn).isEnabled()){
+		   Thread.sleep(10000);		
+			logger.info("Remove button is enabled for user having Admin access");
+		}
+		else{
+			logger.info("Remove button is enabled for user having Admin access");
+		}
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		logger.info("User not found in the List");
+	}
+	
+	}
+public static String getValFromExcel(int row,int col) throws Exception{
+	
+	ExcelutilObject.setExcelFile(excelPath, "AppName");
+	return ExcelutilObject.getCellData(row, col);
+}
 }
