@@ -36,7 +36,7 @@ public class RemoveUserInCCNotification extends BasePageObject {
 	By searchBtn=By.id("searchButton");
 	By CCNotif_link=By.xpath("//a[contains(text(),'Cc Notifications')]");
 	By CCTextBox=By.id("cctype");
-	By rempveBtn=By.id("ccTypeButton");
+	By removeBtn=By.id("ccTypeButton");
 	By emailList=By.xpath("//table[@id='CC']//tr//td");
 	By appNameText=By.xpath("//span/b");
 	
