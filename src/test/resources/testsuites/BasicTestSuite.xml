@@ -3,8 +3,8 @@
 	
 	<parameter name="browserType" value="GC" />
 	<listeners>
-		<listener class-name="com.itc.util.CustomReport" />
-		  <listener class-name="com.itc.util.ExtentReporterNG" />  
+		<listener class-name="com.Gecos.util.CustomReport" />
+		  <listener class-name="com.Gecos.util.ExtentReporterNG" />  
 	</listeners>
 	<test name="Gecos Test"  parallel="false">
 	<groups>
@@ -13,31 +13,30 @@
 			</run>
 		</groups>
 		<classes>
-		         <!-- <class name="com.itc.test.LoginPageTest" /> 
-		          <class name="com.itc.test.AddUserAsAdminTest" />
-		 		  <class name="com.itc.test.AddUserAsAdminTest" /> 
-		 		  <class name="com.itc.test.AdminRolesTest" /> 
-		  		  <class name="com.itc.test.AddUserAsSuperAdminTest" /> 
-		 		  <class name="com.itc.test.SuperAdminRolesTest" /> 
- 		 		  <class name="com.itc.test.UserAsAdminAndSuperAdminTest" />
- 		 		  <class name="com.itc.test.AdminAndSuperAdminRolesTest" /> 
- 		 		  <class name="com.itc.test.AddUserInCCNotificationTest" />
-  		 		  <class name="com.itc.test.StartBESTrialTest" /> 
- 		 		  <class name="com.itc.test.StartTrialForNormalBundleTest"/>
- 		 		  <class name="com.itc.test.StartISVTrialInGecosTest"/> 
- 		 		  <class name="com.itc.test.StartISVTrialFromPCETest"/> 
- 				  <class name="com.itc.test.SearchSpecialCharInStartTrialTest"/>
- 				  <class name="com.itc.test.ExtendTrialTest" /> 
- 				  <class name="com.itc.test.StopTrialTest" />
- 				  <class name="com.itc.test.PurchaseTrialTest" />
- 				  <class name="com.itc.test.ApproveTrialTest" />
- 				  <class name="com.itc.test.SearchSpecialCharForCustInMngTrialTest" />
- 				  <class name="com.itc.test.RejectTrialTest" />
- 				  <class name="com.itc.test.DeleteTrialTest" />
- 				  <class name="com.itc.test.SearchEmptyDataWithCFNTest" />
- 				 <class name="com.itc.test.SearchSpecialCharInAppConfigTest" />
- 				  <class name="com.itc.test.AddUserInCCNotificationTest" />-->
- 				 <class name="com.itc.test.RemoveUserInCCNotificationTest" />
+		         <!-- <class name="com.Gecos.test.LoginPageTest" /> 
+		          <class name="com.Gecos.test.AddUserAsAdminTest" />
+		 		  <class name="com.Gecos.test.AdminRolesTest" /> 
+		  		  <class name="com.Gecos.test.AddUserAsSuperAdminTest" /> 
+		 		  <class name="com.Gecos.test.SuperAdminRolesTest" /> 
+ 		 		  <class name="com.Gecos.test.UserAsAdminAndSuperAdminTest" />
+ 		 		  <class name="com.Gecos.test.AdminAndSuperAdminRolesTest" /> 
+ 		 		  <class name="com.Gecos.test.AddUserInCCNotificationTest" />
+  		 		  <class name="com.Gecos.test.StartBESTrialTest" /> 
+ 		 		  <class name="com.Gecos.test.StartTrialForNormalBundleTest"/>
+ 		 		  <class name="com.Gecos.test.StartISVTrialInGecosTest"/> 
+ 		 		  <class name="com.Gecos.test.StartISVTrialFromPCETest"/> 
+ 				  <class name="com.Gecos.test.SearchSpecialCharInStartTrialTest"/>
+ 				  <class name="com.Gecos.test.ExtendTrialTest" /> 
+ 				  <class name="com.Gecos.test.StopTrialTest" />
+ 				  <class name="com.Gecos.test.PurchaseTrialTest" />
+ 				  <class name="com.Gecos.test.ApproveTrialTest" />
+ 				  <class name="com.Gecos.test.SearchSpecialCharForCustInMngTrialTest" />
+ 				  <class name="com.Gecos.test.RejectTrialTest" />
+ 				  <class name="com.Gecos.test.DeleteTrialTest" />
+ 				  <class name="com.Gecos.test.SearchEmptyDataWithCFNTest" />
+ 				 <class name="com.Gecos.test.SearchSpecialCharInAppConfigTest" />
+ 				  <class name="com.Gecos.test.AddUserInCCNotificationTest" />-->
+ 				 <class name="com.Gecos.test.RemoveUserInCCNotificationTest" />
  				   
 		</classes>
 	</test>

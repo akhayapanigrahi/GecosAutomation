@@ -13,6 +13,8 @@
 			</run>
 		</groups>
 		<classes>
+				         <!--  <class name="com.itc.test.AddUserAsAdminTest" /> -->
+				 		  <class name="com.itc.test.AdminRolesTest" /> 
 			<!-- <class name="com.itc.test.StartBESTrialTest" />
 			<class name="com.itc.test.StartTrialForNormalBundleTest" />
 			<class name="com.itc.test.StartISVTrialInGecosTest" />
@@ -22,10 +24,8 @@
 			<class name="com.itc.test.PurchaseTrialTest" />
 			<class name="com.itc.test.DeleteTrialTest" />
 			<class name="com.itc.test.AddUserInCCNotificationTest" />
-			<class name="com.itc.test.RemoveUserInCCNotificationTest" /> -->
-			
-			
-			<class name="com.itc.test.StartISVTrialFromPCETest" />
+			<class name="com.itc.test.RemoveUserInCCNotificationTest" />
+			<class name="com.itc.test.StartISVTrialFromPCETest" /> -->
 
 		</classes>
 	</test>
