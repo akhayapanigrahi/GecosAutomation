@@ -23,6 +23,9 @@ public class AdminRoles extends BasePageObject {
 	boolean adminFlag = false;
 	boolean manageFlag=false;
     boolean deleteFlag=false;
+	boolean addFlag = false;
+	boolean removeFlag = false;
+
 	public static Logger logger = Logger.getLogger(AdminRoles.class);
 	public static String excelPath = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\testDataSheet.xlsx";
 
@@ -110,7 +113,7 @@ public class AdminRoles extends BasePageObject {
 		
 		if (isElementPresent(ManageTrialsLink)) {
 			setElement(ManageTrialsLink).click();
-			logger.info("Manage trials Page is accessible and displayed for the Admin user");
+			logger.info("Manage trials Page is accessible");
 
 		}
 	}
@@ -120,9 +123,9 @@ public class AdminRoles extends BasePageObject {
 
 			loginFlag = isElementPresent(HomePageLink);
 			if (loginFlag) {
-				logger.info("This user is having  Admin access and have  access to Home page only");
+				logger.info("This user is having  Admin access and have  access to all the Pages");
 			} else {
-				logger.info("This user is not a  Admin access and all the pages are visible");
+				logger.info("This user is not a  Admin access and only Home page is visible");
 			}
 		} catch (Exception e) {
 			throw new Exception("Home trials link is not displayed" + isLoginPageDisplayed() + e.getLocalizedMessage());
@@ -135,7 +138,7 @@ public class AdminRoles extends BasePageObject {
 	try {
     	manageFlag = isElementPresent(ManageTrialsLink);
 		if (manageFlag) {
-			logger.info("This added user is validated as Gecos Admin  and have access to Manage trials page");
+			clickOnManageTrials();
 		} else {
 			logger.info("This user is not having Admin access and only Home page access is available");
 		}
@@ -150,13 +153,12 @@ public class AdminRoles extends BasePageObject {
 			deleteFlag = isElementPresent(DeleteTrialsLink);
 			if (deleteFlag) {
 				setElement(DeleteTrialsLink).click();
-				logger.info("Delete trials Page is accessible and displayed for the Admin user");
+				logger.info("Delete trials Page is accessible for this user");
 				List<WebElement> delete_Links =driver.findElements(deleteLink);
-				if(delete_Links.size()!=0){
-					logger.info("Delete Link is displayed as User is having only Admin access");
+				if(delete_Links.size()==0){
+					logger.info("Delete Link is also Enabled");
 				}
 				else{
-					logger.info("This user is not having Admin access and Delete trials access is available");
 					logger.info("This user is not having Admin access and only Home page access is available");					
 				}
 			}
@@ -180,7 +182,7 @@ public void selectApp(String Appname,String AppID) throws Exception{
 	
 }	
 
-public void isAddButtonEnabled(String Appname,String AppID) throws Exception{
+public boolean isAddButtonEnabled(String Appname,String AppID) throws Exception{
 	
 	waitExplicit(AppConfiLink, 120);
 	setElement(AppConfiLink).click();
@@ -191,14 +193,15 @@ public void isAddButtonEnabled(String Appname,String AppID) throws Exception{
 	
 	if(setElement(addBtn).isEnabled()){
 		
-		logger.info("Add button is enabled for user having Admin access");
+		logger.info("Add button is enabled");
 	}
 	else{
-		logger.info("Add button is not enabled for user having Admin access");
+		logger.info("Add button is disabled ");
 	}
+	return addFlag;
 	
 	}
-public void isRemoveButtonEnabled(String remove_ID, String Appname,String AppID) throws Exception{
+public boolean isRemoveButtonEnabled(String Appname,String AppID) throws Exception{
 	
 	waitExplicit(AppConfiLink, 120);
 	setElement(AppConfiLink).click();
@@ -208,15 +211,15 @@ public void isRemoveButtonEnabled(String remove_ID, String Appname,String AppID)
 	try {
 		if(setElement(removeBtn).isEnabled()){
 		   Thread.sleep(10000);		
-			logger.info("Remove button is enabled for user having Admin access");
+			logger.info("Remove button is enabled ");
 		}
 		else{
-			logger.info("Remove button is enabled for user having Admin access");
+			logger.info("Remove button is disabled ");
 		}
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		logger.info("User not found in the List");
+		logger.info("Not able to verify the Remove option");
 	}
+	return removeFlag;
 	
 	}
 public static String getValFromExcel(int row,int col) throws Exception{
