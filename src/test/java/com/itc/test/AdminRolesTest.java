@@ -18,8 +18,10 @@ public class AdminRolesTest extends BaseTestObject {
 	boolean flag = false;
 	boolean manageFlag=true;
 	boolean deleteFlag=false;
+	boolean addFlag=false;
+	boolean removeFlag=false;
 	public static String excelPath = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\testDataSheet.xlsx";
-
+	
 	@Parameters({ "browserType"})
 	@Test(priority = 0, enabled = true,groups="BasicTests")
 	public void verifyHomePageDisplay() throws Exception {
@@ -66,11 +68,44 @@ public class AdminRolesTest extends BaseTestObject {
 			throw new Exception("Failed to verify the delete link"+ "\n " + e.getLocalizedMessage());
 		}
 	}
-	
-public static String getValFromExcel(int row,int col) throws Exception{
+	@Test(priority = 3, enabled = true,groups="BasicTests")
+	public void verifyAddBtnEnabled() throws Exception {
+		try {
+
+			admin = new AdminRoles(driver);
+			String Appname=getValForApp(2,2);
+			String AppID=getValForApp(2,4);
+			addFlag = admin.isAddButtonEnabled(Appname,AppID);
+			Assert.assertTrue(addFlag);
+		}
+
+		catch (Exception e) {
+			throw new Exception("Failed to verify the Add button"+ "\n " + e.getLocalizedMessage());
+		}
+	}
+	@Test(priority = 4, enabled = true,groups="BasicTests")
+	public void verifyRemoveBtnEnabled() throws Exception {
+		try {
+
+			admin = new AdminRoles(driver);
+			String Appname=getValForApp(2,2);
+			String AppID=getValForApp(2,4);
+			removeFlag = admin.isRemoveButtonEnabled(Appname, AppID);
+			Assert.assertTrue(removeFlag);
+		}
+
+		catch (Exception e) {
+			throw new Exception("Failed to verify the Remove button"+ "\n " + e.getLocalizedMessage());
+		}
+	}
+    public static String getValFromExcel(int row,int col) throws Exception{
 	
 	ExcelutilObject.setExcelFile(excelPath, "LoginTestData");
 	return ExcelutilObject.getCellData(row, col);
 }
-
+    public static String getValForApp(int row,int col) throws Exception{
+	
+	ExcelutilObject.setExcelFile(excelPath, "AppName");
+	return ExcelutilObject.getCellData(row, col);
+}
 }
