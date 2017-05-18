@@ -1,2 +1,2 @@
-# AAT
-Aynax Automation Tests
+# GAT
+Gecos Automation Tests
