@@ -96,8 +96,11 @@ public class BaseTestObject {
 	//@BeforeSuite(alwaysRun = true)
 	@BeforeClass(alwaysRun = true)
     public void setup(String browser) throws Exception
-	{
-        if(browser.equalsIgnoreCase("FF"))
+	
+    {
+    		System.out.println(System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\chromedriver.exe");
+
+	    if(browser.equalsIgnoreCase("FF"))
         {
             System.setProperty("webdriver.gecko.driver",firefoxDriverPath);
 
