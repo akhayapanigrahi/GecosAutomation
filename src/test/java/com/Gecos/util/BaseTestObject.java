@@ -98,7 +98,6 @@ public class BaseTestObject {
     public void setup(String browser) throws Exception
 	
     {
-    		System.out.println(System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\chromedriver.exe");
 
 	    if(browser.equalsIgnoreCase("FF"))
         {
