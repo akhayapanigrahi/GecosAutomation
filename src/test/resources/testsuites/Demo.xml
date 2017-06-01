@@ -15,7 +15,7 @@
 		</groups>
 		<classes>
 
-			<!-- <class name="com.Gecos.test.AddUserAsAdminTest" />
+			<class name="com.Gecos.test.AddUserAsAdminTest" />
 			<class name="com.Gecos.test.AdminRolesTest" />
 			<class name="com.Gecos.test.StartBESTrialTest" />
 			<class name="com.Gecos.test.StartTrialForNormalBundleTest" />
@@ -26,8 +26,8 @@
 			<class name="com.Gecos.test.PurchaseTrialTest" />
 			<class name="com.Gecos.test.DeleteTrialTest" />
 			<class name="com.Gecos.test.AddUserInCCNotificationTest" />
-			<class name="com.Gecos.test.RemoveUserInCCNotificationTest" /> -->
-            <class name="com.Gecos.test.AdminRolesTest" />
+			<class name="com.Gecos.test.RemoveUserInCCNotificationTest" />
+           
 		</classes>
 	</test>
 </suite>
